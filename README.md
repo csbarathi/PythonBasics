@@ -1,11 +1,11 @@
 # PythonBasics
-Data Types, Objects
-Operators
-Data Structures & Algorithms
-Object Oriented Programming
-Functions
-Modules
-Exceptions & Error Handling
-Synchronous vs Asynchronous
-Event Handling
-HTML/CSS
+Data Types, Objects <br>
+Operators<br>
+Data Structures & Algorithms<br>
+Object Oriented Programming<br>
+Functions<br>
+Modules<br>
+Exceptions & Error Handling<br>
+Synchronous vs Asynchronous<br>
+Event Handling<br>
+HTML/CSS<br>
