@@ -66,3 +66,20 @@ diary = dict([(1, 'may'), (2, 'new york')])
 print(diary.get(2))
 print(diary.keys())
 print(diary.values())
+
+x = 17
+y = 3
+print(x+y) # Addition
+print(x-y) # Subtraction
+print(x*y) # Multiplication
+print(x/y) # Division
+print(x%y) # Modulus
+print(x**y) # Exponent
+print(x//y) # Floor Division
+
+print('shift right:'+str(x>>2)) # Shift right
+print('shift left:'+str(x<<2)) # Shift right
+print(False & (x<700))
+
+if(False & x<700):
+  print("value of x:"+str(x))
