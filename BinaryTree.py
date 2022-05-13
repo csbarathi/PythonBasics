@@ -36,9 +36,9 @@ class Node:
       if root:
          print("Root:|"+str(root.data))
          res.append(root.data)
-         print("1|"+str(res)+"|"+("Left node present" if (root.left is None) else "No left node" ))
+         print("1|"+str(res)+"|"+("No left node" if (root.left is None) else "Left node present" ))
          res = res + self.unorderedTraversal(root.left)
-         print("2|"+str(res)+"|"+("Right node present" if (root.right is None) else "No right node" ))
+         print("2|"+str(res)+"|"+("No right node" if (root.right is None) else "Right node present" ))
          res = res + self.unorderedTraversal(root.right)
          print("3|"+str(res))
       else:
