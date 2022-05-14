@@ -26,30 +26,25 @@ class Node:
       print( self.data),
       if self.right:
          self.right.print()
-   def printData(self):
-       if(self.data!=None):
-           return self.data
-       else:
-           return None
-   def unorderedTraversal(self, root):
+   def preOrderTraversal(self, root):
       res = []
       if root:
          print("Root:|"+str(root.data))
          res.append(root.data)
          print("1|"+str(res)+"|"+("No left node" if (root.left is None) else "Left node present" ))
-         res = res + self.unorderedTraversal(root.left)
+         res = res + self.preOrderTraversal(root.left)
          print("2|"+str(res)+"|"+("No right node" if (root.right is None) else "Right node present" ))
-         res = res + self.unorderedTraversal(root.right)
+         res = res + self.preOrderTraversal(root.right)
          print("3|"+str(res))
       else:
           print("None Root")
       return res
-   def orderedTraversal(self, root):
+   def postOrderTraversal(self, root):
       res = []
       if root:
+         res = self.postOrderTraversal(root.left)
+         res = res + self.postOrderTraversal(root.right)
          res.append(root.data)
-         res = self.orderedTraversal(root.left)
-         res = res + self.orderedTraversal(root.right)
       return res
 sampleNode = Node(100)
 sampleNode.add(50)
@@ -57,5 +52,5 @@ sampleNode.add(800)
 sampleNode.add(2)
 sampleNode.add(30)
 sampleNode.print()
-print("Unordered:"+str(sampleNode.unorderedTraversal(sampleNode)))
-print("Ordered:"+str(sampleNode.orderedTraversal(sampleNode)))
+print("Pre Order:"+str(sampleNode.preOrderTraversal(sampleNode)))
+print("Post Order:"+str(sampleNode.postOrderTraversal(sampleNode)))
