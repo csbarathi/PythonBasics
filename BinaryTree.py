@@ -46,6 +46,13 @@ class Node:
          res = res + self.postOrderTraversal(root.right)
          res.append(root.data)
       return res
+   def inOrderTraversal(self, root):
+      res = []
+      if root:
+         res = self.inOrderTraversal(root.left)
+         res.append(root.data)
+         res = res + self.inOrderTraversal(root.right)
+      return res
 sampleNode = Node(100)
 sampleNode.add(50)
 sampleNode.add(800)
@@ -53,4 +60,5 @@ sampleNode.add(2)
 sampleNode.add(30)
 sampleNode.print()
 print("Pre Order:"+str(sampleNode.preOrderTraversal(sampleNode)))
+print("In Order:"+str(sampleNode.inOrderTraversal(sampleNode)))
 print("Post Order:"+str(sampleNode.postOrderTraversal(sampleNode)))
